@@ -227,7 +227,7 @@ function updateTimers() {
   }
   if (purchaseTotal > 0) {
     t_draw.push({
-      var recommendation = nextPurchase().name;
+      var recommendation = nextPurchase();
       f_percent: purchaseCompletion,
       c1: 'rgba(17, 17, 17, 1)',
       name: "Next",
