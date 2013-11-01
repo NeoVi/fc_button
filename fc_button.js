@@ -221,7 +221,7 @@ function updateTimers() {
     t_draw.push({
       f_percent: chainCompletion,
       c1: 'rgba(51, 51, 51, 1)',
-      name: "Chain Completion Time",
+      name: "Kette",
       display: timeDisplay(divCps(Math.max(chainTotal + bankTotal - Game.cookies - chainFinished,0), actualCps))
     });
   }
@@ -229,7 +229,7 @@ function updateTimers() {
     t_draw.push({
       f_percent: purchaseCompletion,
       c1: 'rgba(17, 17, 17, 1)',
-      name: "Next",
+      name: "Naechstes",
       display: timeDisplay(divCps(Math.max(purchaseTotal + bankTotal - Game.cookies,0), actualCps))
     });
   }
@@ -237,7 +237,7 @@ function updateTimers() {
     var maxColor = (Game.cookies >= bankTotal) ? 'rgba(252, 212, 0, 1)' : 'rgba(201, 169, 0, 1)'
     t_draw.push({
       f_percent: bankMax,
-      name: "Max Bank",
+      name: "Bank",
       display: Beautify(bankTotal),
       c1: maxColor,
       overlay: true
@@ -256,20 +256,20 @@ function updateTimers() {
     t_draw.push({
       f_percent: gc_max_delay,
       c1: "rgba(255, 155, 0, 1)",
-      name: "Golden Cookie Maximum (99%)",
+      name: "GC Max",
       display: timeDisplay((gc_max_delay * maxCookieTime()) / Game.fps)
     });
     t_draw.push({
       f_percent: gc_delay,
       c1: "rgba(255, 195, 0, 1)",
-      name: "Golden Cookie Estimate (50%)",
+      name: "GC",
       display: timeDisplay((gc_delay * maxCookieTime()) / Game.fps),
       overlay: true
     });
     t_draw.push({
       f_percent: gc_min_delay,
       c1: "rgba(255, 235, 0, 1)",
-      name: "Golden Cookie Minimum (1%)",
+      name: "GC Min",
       display: timeDisplay((gc_min_delay * maxCookieTime()) / Game.fps),
       overlay: true
 
@@ -295,7 +295,7 @@ function updateTimers() {
     t_draw.push({
       f_percent: decimal_HC_complete,
       c1: "rgba(55, 169, 230, 1)",
-      name: "HC Completion",
+      name: "Heavenly Chip",
       display: (Math.round(decimal_HC_complete*10000)/100)+"%"
     });
   }
